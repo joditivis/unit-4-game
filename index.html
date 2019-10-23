@@ -7,25 +7,114 @@
         <title>Crystal Collector Game!</title>
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     </head>
 
     <body>
-    
+
+<div class="container"> 
     <!--Main Header Title-->
-    <div class="col-sm-12">
-        <div class="jumbotron">
-            <div class="text-center">              
-                <h1 class="game-title">Crystal Collector</h1>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="jumbotron">
+                <div class="text-center">              
+                    <h1 class="game-title">Crystal Collector</h1>
+                </div>
             </div>
         </div>
     </div>
+</div>
+    <!---->
 
     <!--How To Play Card-->
-        <div class="how-to-play col-sm-4">
-            <div class="card-header">How to Play:</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">How to Play:</div>
+                    <div class="card-body">
+                        <p>You will be given a random number at the start of the game located under <strong>Number to Match</strong>.</p>
+                        <p>Each of the crystals below have a set number value that is hidden until you click on it. By clicking one of the four, you will add that crystals value to your guessed number.</p>
+                        <p>You win by trying to make your guessed number equal to the <strong>Number to Match</strong>.</p>
+                        <p>Each time you play, the number value of each crystal will change.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!---->
+
+    <!--Number Cards-->
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <div class="card">
                 <div class="card-body">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                   <h5 class="card-title">Number to Match:</h5>
+                   <p class="card-text">62<span id="random-number"></span></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Your Number:</h5>
+                    <p class="card-text">24<span id="number-guessed"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!---->
+
+    <!--Crystals Card-->
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                  
+                    <div class="row">
+                    <div class="col-3">
+                        <img id="first-crystal" src="assets/images/pink.jpg" width="135px" height="165px" alt="pink crystal">
+                    </div>
+                    <div class="col-3">
+                        <img id="second-crystal" src="assets/images/oceanblue.jpg" width="150px" height="160px" alt="ocean blue crystal">
+                    </div>
+                    <div class="col-3">
+                        <img id="third-crystal" src="assets/images/yellow.jpg" width="190px" height="130px" alt="yellow crystal">
+                    </div>
+                    <div class="col-3">
+                        <img id="col-3" src="assets/images/purple.jpg" width="150px" height="130px" alt="purple crystal">
+                    </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!---->
+
+    <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-body">
+                           <h5 class="card-title">Wins:</h5>
+                           <p class="card-text">0<span id="winCount"></span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Losses:</h5>
+                            <p class="card-text">0<span id="lossCount"></span></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
