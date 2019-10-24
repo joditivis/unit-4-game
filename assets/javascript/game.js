@@ -11,7 +11,7 @@ var lossCount = 0;
 function startGame() {
 
     //generates random number from array
-    var numToMatch = Math.floor(Math.random() * 120 + 19);
+    var numToMatch = Math.floor(Math.random() * 120 + 30);
 
     //stores it in console to make sure it's working properly
     console.log(numToMatch);
@@ -19,26 +19,41 @@ function startGame() {
     //displays random number from randomNum array on page
     $("#random-number").text(numToMatch);
 
-    //resets players guessed number to 0
+    //resets players guessed number to 0 after player wins or loses
     playerNum = 0;
 
     // generate a random number for each crystal 
-    var crystal1 = Math.floor(Math.random() * 18 + 1);
-    var crystal2 = Math.floor(Math.random() * 18 + 1);
-    var crystal3 = Math.floor(Math.random() * 18 + 1);
-    var crystal4 = Math.floor(Math.random() * 18 + 1);
-   
-   
-    // for (var i = 0; i < numForCrystals.length; i++) {
-    //     var imageCrystal = $(".crystalImage");
-    //     imageCrystal.attr("data-crystalvalue", numForCrystals[i]);
+    var crystal1 = Math.floor(Math.random() * 25 + 1);
+    var crystal2 = Math.floor(Math.random() * 25 + 1);
+    var crystal3 = Math.floor(Math.random() * 25 + 1);
+    var crystal4 = Math.floor(Math.random() * 25 + 1);
 
-    //     $(".crystalImage").text(numForCrystals);
-        
+    $("#number-guessed").text(playerNum);
 
-        // $("#crystalImages").html(crystalNum);
-        // console.log(crystalNum);       
+    console.log(crystal1);
+    console.log(crystal2);
+    console.log(crystal3);
+    console.log(crystal4);
+    console.log(playerNum);
+
+}
+
+    function roundComplete() {
+        console.log("Wins: " + winCount + "Losses: " + lossCount);
+
+        if (playerNum === numToMatch) {
+            winCount++;
+            $("#winCount").text(winCount);
+        }
+
+        else if (playerNum > numToMatch) {
+            lossCount++;
+            $("#lossCount").text(lossCount);
+
+            startGame();
+        }
     }
+
 // ON CLICK FUNCTION
     // $(".crystalImage").on("click", function(){
     //    var crystalValue = ($(this).attr("data-crystalvalue"));
