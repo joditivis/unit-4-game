@@ -7,6 +7,7 @@
         <title>Crystal Collector Game!</title>
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     </head>
@@ -46,6 +47,8 @@
 </div>
     <!---->
 
+<br>
+
     <!--Number Cards-->
 <div class="container">
     <div class="row">
@@ -53,7 +56,7 @@
             <div class="card">
                 <div class="card-body">
                    <h5 class="card-title">Number to Match:</h5>
-                   <p class="card-text">62<span id="random-number"></span></p>
+                   <p class="card-text"><span id="random-number">0</span></p>
                 </div>
             </div>
         </div>
@@ -61,13 +64,15 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Your Number:</h5>
-                    <p class="card-text">24<span id="number-guessed"></span></p>
+                    <p class="card-text"><span id="number-guessed">0</span></p>
                 </div>
             </div>
         </div>
     </div>
 </div>
     <!---->
+
+<br>
 
     <!--Crystals Card-->
 <div class="container">
@@ -76,20 +81,22 @@
             <div class="card">
                 <div class="card-body">
                   
+                <div class="buttons">
                     <div class="row">
                     <div class="col-3">
-                        <img id="first-crystal" src="assets/images/pink.jpg" width="135px" height="165px" alt="pink crystal">
+                        <img class="crystalImage" id="crystal1" src="assets/images/pink.jpg" width="135px" height="165px" alt="pink crystal">
                     </div>
                     <div class="col-3">
-                        <img id="second-crystal" src="assets/images/oceanblue.jpg" width="150px" height="160px" alt="ocean blue crystal">
+                        <img class="crystalImage" id="crystal2" src="assets/images/oceanblue.jpg" width="150px" height="160px" alt="ocean blue crystal">
                     </div>
                     <div class="col-3">
-                        <img id="third-crystal" src="assets/images/yellow.jpg" width="190px" height="130px" alt="yellow crystal">
+                        <img class="crystalImage" id="crystal3" src="assets/images/yellow.jpg" width="190px" height="130px" alt="yellow crystal">
                     </div>
                     <div class="col-3">
-                        <img id="col-3" src="assets/images/purple.jpg" width="150px" height="130px" alt="purple crystal">
+                        <img class="crystalImage" id="crystal4" src="assets/images/purple.jpg" width="150px" height="130px" alt="purple crystal">
+                    </div>                    
                     </div>
-                    </div>
+                </div>
 
                 </div>
             </div>
@@ -98,27 +105,34 @@
 </div>
     <!---->
 
-    <div class="container">
-            <div class="row">
-                <div class="col-6">
-                    <div class="card">
-                        <div class="card-body">
-                           <h5 class="card-title">Wins:</h5>
-                           <p class="card-text">0<span id="winCount"></span></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Losses:</h5>
-                            <p class="card-text">0<span id="lossCount"></span></p>
-                        </div>
-                    </div>
+<br>
+
+    <!--Win/Loss Cards-->
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Wins:</h5>
+                    <p class="card-text"><span id="winCount">0</span></p>
                 </div>
             </div>
         </div>
+        <div class="col-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Losses:</h5>
+                    <p class="card-text"><span id="lossCount">0</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <!---->
+<br>
 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="assets/javascript/game.js"></script>
 
     </body>
 </html>
