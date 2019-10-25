@@ -35,26 +35,42 @@ function startGame() {
     console.log(crystal3);
     console.log(crystal4);
     console.log(playerNum);
-
 }
 
-    function roundComplete() {
-        console.log("Wins: " + winCount + "Losses: " + lossCount);
+//     if (playerNum === numToMatch) {
+//         winCount++;
+//         $("#winCount").text(winCount);
+//     }
 
-        if (playerNum === numToMatch) {
-            winCount++;
-            $("#winCount").text(winCount);
-        }
+//     else if (playerNum > numToMatch) {
+//         lossCount++;
+//         $("#lossCount").text(lossCount);
 
-        else if (playerNum > numToMatch) {
-            lossCount++;
-            $("#lossCount").text(lossCount);
-
-            startGame();
-        }
-    }
+//             startGame();
+//     }
+// }
 
 // ON CLICK FUNCTION
+$("#crystal1").on("click", function(){
+    playerNum += crystal1;
+    console.log("Your Number: " + playerNum); 
+    $("#number-guessed").text(playerNum);
+})
+
+$("#crystal2").on("click", function(){
+    playerNum += crystal2;
+    console.log("Your Number: " + playerNum);
+    $("number-guessed").text(playerNum);
+})
+
+
+
+
+
+
+
+
+
     // $(".crystalImage").on("click", function(){
     //    var crystalValue = ($(this).attr("data-crystalvalue"));
     //    crystalValue = parseInt(crystalValue);
