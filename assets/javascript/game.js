@@ -7,9 +7,6 @@ var playerNum = 0;
 var winCount = 0;
 var lossCount = 0;
 
-//START GAME FUNCTION
-function startGame() {
-
     //generates random number from array
     var numToMatch = Math.floor(Math.random() * 120 + 30);
 
@@ -23,10 +20,10 @@ function startGame() {
     playerNum = 0;
 
     // generate a random number for each crystal 
-    var crystal1 = Math.floor(Math.random() * 25 + 1);
-    var crystal2 = Math.floor(Math.random() * 25 + 1);
-    var crystal3 = Math.floor(Math.random() * 25 + 1);
-    var crystal4 = Math.floor(Math.random() * 25 + 1);
+    var crystal1 = Math.floor(Math.random() * 18 + 1);
+    var crystal2 = Math.floor(Math.random() * 18 + 1);
+    var crystal3 = Math.floor(Math.random() * 18 + 1);
+    var crystal4 = Math.floor(Math.random() * 18 + 1);
 
     $("#number-guessed").text(playerNum);
 
@@ -35,60 +32,70 @@ function startGame() {
     console.log(crystal3);
     console.log(crystal4);
     console.log(playerNum);
+
+
+function win() {
+    winCount++;
+    $("#winCount").text(winCount);
+
 }
+function loss() {
+    lossCount++;
+    $("#lossCount").text(lossCount);
 
-//     if (playerNum === numToMatch) {
-//         winCount++;
-//         $("#winCount").text(winCount);
-//     }
-
-//     else if (playerNum > numToMatch) {
-//         lossCount++;
-//         $("#lossCount").text(lossCount);
-
-//             startGame();
-//     }
-// }
+}
 
 // ON CLICK FUNCTION
 $("#crystal1").on("click", function(){
     playerNum += crystal1;
     console.log("Your Number: " + playerNum); 
     $("#number-guessed").text(playerNum);
+
+    if (playerNum === numToMatch) {
+        win()
+    }
+    else if (playerNum > numToMatch) {
+        loss()
+    }
 })
 
 $("#crystal2").on("click", function(){
     playerNum += crystal2;
     console.log("Your Number: " + playerNum);
     $("number-guessed").text(playerNum);
+
+    if (playerNum === numToMatch) {
+        win()
+    }
+    else if (playerNum > numToMatch) {
+        loss()
+    }
 })
 
+$("#crystal3").on("click", function(){
+    playerNum += crystal3;
+    console.log("Your Number: " + playerNum);
+    $("number-guessed").text(playerNum);
 
+    if (playerNum === numToMatch) {
+        win()
+    }
+    else if (playerNum > numToMatch) {
+        loss()
+    }
+})
 
+$("#crystal4").on("click", function(){
+    playerNum += crystal4;
+    console.log("Your Number: " + playerNum);
+    $("number-guessed").text(playerNum);
 
-
-
-
-
-
-    // $(".crystalImage").on("click", function(){
-    //    var crystalValue = ($(this).attr("data-crystalvalue"));
-    //    crystalValue = parseInt(crystalValue);
-    //    playerNum += crystalValue;
-
-    //    if (playerNum === numToMatch) {
-    //        winCount++;
-    //    }
-
-    //    else if (playerNum >= numToMatch) {
-    //        lossCount++;
-    //    }
-
-    //    $("#number-guessed").text(playerNum);
-    //    $("#winCount").text(winCount);
-    //    $("#lossCount").text(lossCount);
-    // });
-
-startGame()
+    if (playerNum === numToMatch) {
+        win()
+    }
+    else if (playerNum > numToMatch) {
+        loss()
+    }
+})
 
 });
