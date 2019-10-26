@@ -11,7 +11,7 @@ var lossCount = 0;
     var numToMatch = Math.floor(Math.random() * 120 + 30);
 
     //stores it in console to make sure it's working properly
-    console.log(numToMatch);
+    console.log("Number to Match: " + numToMatch);
 
     //displays random number from randomNum array on page
     $("#random-number").text(numToMatch);
@@ -27,11 +27,8 @@ var lossCount = 0;
 
     $("#number-guessed").text(playerNum);
 
-    console.log(crystal1);
-    console.log(crystal2);
-    console.log(crystal3);
-    console.log(crystal4);
-    console.log(playerNum);
+    console.log("Crystal Numbers: " + crystal1, crystal2, crystal3, crystal4);
+    console.log("Your Number: " + playerNum);
 
 //=========================
 //RESET FUNCTION
@@ -40,7 +37,7 @@ function resetGame() {
     playerNum = 0;
 
     var numToMatch = Math.floor(Math.random() * 120 + 30);
-    console.log(numToMatch);
+    console.log("Number to Match: " + numToMatch);
     $("#random-number").text(numToMatch);
 
     var crystal1 = Math.floor(Math.random() * 18 + 1);
@@ -50,11 +47,8 @@ function resetGame() {
 
     $("#number-guessed").text(playerNum);
 
-    console.log(crystal1);
-    console.log(crystal2);
-    console.log(crystal3);
-    console.log(crystal4);
-    console.log(playerNum);
+    console.log("Crystal Numbers: " + crystal1, crystal2, crystal3, crystal4);
+    console.log("Your Number: " + playerNum);
 }
 
 //=========================
@@ -82,10 +76,10 @@ $("#crystal1").on("click", function(){
     if (playerNum === numToMatch) {
         win()       
     }
-    else if (playerNum > numToMatch) {
+    else if (playerNum >= numToMatch) {
         lose()       
     }
-})
+});
 
 $("#crystal2").on("click", function(){
     playerNum = playerNum + crystal2;
@@ -95,10 +89,10 @@ $("#crystal2").on("click", function(){
     if (playerNum === numToMatch) {
         win()       
     }
-    else if (playerNum > numToMatch) {
+    else if (playerNum >= numToMatch) {
         lose()      
     }
-})
+});
 
 $("#crystal3").on("click", function(){
     playerNum = playerNum + crystal3;
@@ -108,10 +102,10 @@ $("#crystal3").on("click", function(){
     if (playerNum === numToMatch) {
         win()
     }
-    else if (playerNum > numToMatch) {
+    else if (playerNum >= numToMatch) {
         lose()
     }
-})
+});
 
 $("#crystal4").on("click", function(){
     playerNum = playerNum + crystal4;
@@ -124,8 +118,6 @@ $("#crystal4").on("click", function(){
     else if (playerNum >= numToMatch) {
         lose()
     }
-})
-
-resetGame()
+});
 
 });
