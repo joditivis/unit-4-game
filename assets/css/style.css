@@ -1,0 +1,47 @@
+body {
+    background-image: url(../images/greenish.png);
+    background-size: 110%;
+}
+
+.card, .jumbotron {
+    background: hsla(0, 0%, 100%, 0.7);
+}
+
+.buttons {
+    background: white;
+    border-radius: 4px; 
+}
+
+/*Positioning each crystal*/
+#crystal1 {
+    margin-left: 35%;
+}
+#crystal2 {
+    margin-left: 20%
+}
+#crystal3 {
+    margin-left: 5%;
+    margin-top: 7%;
+}
+#crystal4 {
+    margin-top: 7%;
+}
+
+/*Fonts for titles*/
+.game-title {
+    font-family: 'ZCOOL XiaoWei', serif;
+    font-size: 70px;
+}
+
+.card-header, .card-title, .card-body {
+    font-family: 'ZCOOL XiaoWei', serif;
+}
+
+.card-header {
+    font-size: 20px;
+}
+
+#random-number, #number-guessed, #winCount, #lossCount {
+    font-size: 25px;
+}
+

@@ -121,7 +121,7 @@ $("#crystal4").on("click", function(){
     if (playerNum === numToMatch) {
         win()
     }
-    else if (playerNum > numToMatch) {
+    else if (playerNum >= numToMatch) {
         lose()
     }
 })
