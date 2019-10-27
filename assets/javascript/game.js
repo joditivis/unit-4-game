@@ -15,20 +15,18 @@ var lossCount = 0;
 function resetGame() {
 
     //generates random number for player to match
-    var numToMatch = Math.floor(Math.random() * 120 + 30);
-
-    //stores it in console to make sure it's working properly
-    console.log(numToMatch);
+    numToMatch = Math.floor(Math.random() * 101 + 19);
 
     //resets players guessed number to 0 after player wins or loses
     playerNum = 0;
 
-    // generate a random number between 1-17 for each crystal 
-    var crystal1 = Math.floor(Math.random() * 18 + 1);
-    var crystal2 = Math.floor(Math.random() * 18 + 1);
-    var crystal3 = Math.floor(Math.random() * 18 + 1);
-    var crystal4 = Math.floor(Math.random() * 18 + 1);
+    // for loop to go through each individual crystal image 
+    for (var i = 0; i < crystals.length; i++) {
 
+        //crystals[i] is calling the crystals that we placed in the for loop,
+        //.setAttribute is giving crystals[i] a value of a number between 1-12, and calling that value crystalNumber
+        crystals[i].setAttribute("crystalNumber", Math.floor(Math.random() * 11 + 1))
+    }
 
     //displays random number from randomNum array on page
     $("#random-number").text(numToMatch);
@@ -37,89 +35,31 @@ function resetGame() {
 
     //stores in console to make sure it's working properly
     console.log(numToMatch);
-    console.log(crystal1);
-    console.log(crystal2);
-    console.log(crystal3);
-    console.log(crystal4);
     console.log(playerNum);
+    console.log(crystals[i]);
 }
+
+
+
+
 
 //=========================
 // WIN OR LOSE FUNCTIONS
 //=========================
 function winORlose() {
-    winCount++;
-    $("#winCount").text(winCount);
-
-    resetGame();
+    
+    if (playerNum === numToMatch) {
+        resetGame();
+        winCount++;
+        $("#winCount").text(winCount);
+    }
+    else if (playerNum >= numToMatch) {
+        resetGame();
+        lossCount++;
+        $("#lossCount").text(lossCount);
+    }
 }
-function lose() {
-    lossCount++;
-    $("#lossCount").text(lossCount);
 
-    resetGame();
-}
+winORlose();
 
-//==========================
-// ON CLICK FUNCTION
-//==========================
-$("#crystal1").on("click", function(){
-    playerNum += crystal1;
-    playerNum = playerNum + crystal1;
-    console.log("Your Number: " + playerNum); 
-    $("#number-guessed").text(playerNum);
-
-    if (playerNum === numToMatch) {
-        winORlose()      
-    }
-    else if (playerNum > numToMatch) {
-        loss()
-        lose()       
-    }
-})
-
-$("#crystal2").on("click", function(){
-    playerNum += crystal2;
-    playerNum = playerNum + crystal2;
-    console.log("Your Number: " + playerNum);
-    $("number-guessed").text(playerNum);
-
-    if (playerNum === numToMatch) {
-        win()       
-    }
-    else if (playerNum > numToMatch) {
-        lose()      
-    }
-})
-
-$("#crystal3").on("click", function(){
-    playerNum += crystal3;
-    playerNum = playerNum + crystal3;
-    console.log("Your Number: " + playerNum);
-    $("number-guessed").text(playerNum);
-
-    if (playerNum === numToMatch) {
-        win()
-    }
-    else if (playerNum > numToMatch) {
-        lose()
-    }
-})
-
-$("#crystal4").on("click", function(){
-    playerNum += crystal4;
-    playerNum = playerNum + crystal4;
-    console.log("Your Number: " + playerNum);
-    $("number-guessed").text(playerNum);
-
-    if (playerNum === numToMatch) {
-        win()
-    }
-    else if (playerNum > numToMatch) {
-        lose()
-    }
-})
-
-resetGame()
-
-})
+});
