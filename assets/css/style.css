@@ -31,6 +31,8 @@ body {
 .game-title {
     font-family: 'ZCOOL XiaoWei', serif;
     font-size: 70px;
+    color:black;
+    text-shadow: 4px 4px rgb(255, 255, 255);
 }
 
 .card-header, .card-title, .card-body {
