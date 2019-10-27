@@ -11,10 +11,10 @@ var lossCount = 0;
     var numToMatch = Math.floor(Math.random() * 101 + 19)
 
     // generate a random number between 1-12 for each crystal 
-    var crystal1 = Math.floor(Math.random() * 12 + 1)
-    var crystal2 = Math.floor(Math.random() * 12 + 1)
-    var crystal3 = Math.floor(Math.random() * 12 + 1)
-    var crystal4 = Math.floor(Math.random() * 12 + 1)
+    var gem1 = Math.floor(Math.random() * 12 + 1);
+    var gem2 = Math.floor(Math.random() * 12 + 1);
+    var gem3 = Math.floor(Math.random() * 12 + 1);
+    var gem4 = Math.floor(Math.random() * 12 + 1);
 
 
     //displays each variable on page from html
@@ -41,10 +41,10 @@ function resetGame() {
     
     $("#random-number").text(numToMatch);
 
-    crystal1 = Math.floor(Math.random() * 12 + 1);
-    crystal2 = Math.floor(Math.random() * 12 + 1);
-    crystal3 = Math.floor(Math.random() * 12 + 1);
-    crystal4 = Math.floor(Math.random() * 12 + 1);
+    gem1 = Math.floor(Math.random() * 12 + 1);
+    gem2 = Math.floor(Math.random() * 12 + 1);
+    gem3 = Math.floor(Math.random() * 12 + 1);
+    gem4 = Math.floor(Math.random() * 12 + 1);
 
     $("#number-guessed").text(playerNum);
 }
@@ -53,11 +53,13 @@ function resetGame() {
 // WIN OR LOSE FUNCTIONS
 //=========================
 function win() {
+    alert("You won!");
     winCount++;
     $("#winCount").text(winCount);
     resetGame();
 }
 function lose() {
+    alert("Bummer! You lost.");
     lossCount++;
     $("#lossCount").text(lossCount);
     resetGame();
@@ -68,7 +70,7 @@ function lose() {
 //==========================
 $('#crystal1').on('click', function() {
 
-    playerNum = playerNum + crystal1;
+    playerNum = playerNum + gem1;
 
     console.log("Your Number: " + playerNum); 
     $("#number-guessed").text(playerNum);
@@ -80,13 +82,13 @@ $('#crystal1').on('click', function() {
         lose();       
     }
 })
-
+//=========
 $('#crystal2').on('click', function() {
 
-    playerNum = playerNum + crystal2;
+    playerNum = playerNum + gem2;
 
     console.log("Your Number: " + playerNum);
-    $("number-guessed").text(playerNum);
+    $("#number-guessed").text(playerNum);
 
     if (playerNum == numToMatch) {
         win();       
@@ -95,13 +97,13 @@ $('#crystal2').on('click', function() {
         lose();      
     }
 })
-
+//========
 $('#crystal3').on('click', function() {
 
-    playerNum = playerNum + crystal3;
+    playerNum = playerNum + gem3;
 
     console.log("Your Number: " + playerNum);
-    $("number-guessed").text(playerNum);
+    $("#number-guessed").text(playerNum);
 
     if (playerNum == numToMatch) {
         win();
@@ -110,13 +112,13 @@ $('#crystal3').on('click', function() {
         lose();
     }
 })
-
+//========
 $('#crystal4').on('click', function() {
 
-    playerNum = playerNum + crystal4;
+    playerNum = playerNum + gem4;
 
     console.log("Your Number: " + playerNum);
-    $("number-guessed").text(playerNum);
+    $("#number-guessed").text(playerNum);
 
     if (playerNum == numToMatch) {
         win();
@@ -124,6 +126,5 @@ $('#crystal4').on('click', function() {
     else if (playerNum >= numToMatch) {
         lose();
     }
-});
-
+  });
 });
