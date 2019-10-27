@@ -27,7 +27,11 @@ Also, all the crystals will have four new hidden values.
 # Tools + Languages Used:
 * HTML
 * CSS
+* Bootstrap
+* Google Fonts
 * JavaScript
 * jQuery
 
+
 # Features:
+![Image](crystalcollectorgame.png)
