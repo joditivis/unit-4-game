@@ -1,6 +1,6 @@
 body {
-    background-image: url(../images/greenish.png);
-    background-size: 110%;
+    background-image: url(../images/crystalbackground2.jpg);
+    background-size: 100%;
 }
 
 .card, .jumbotron {
@@ -44,6 +44,6 @@ body {
 }
 
 #random-number, #number-guessed, #winCount, #lossCount {
-    font-size: 25px;
+    font-size: 30px;
 }
 
