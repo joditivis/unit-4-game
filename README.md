@@ -1,5 +1,5 @@
 # Crystal Collector Game
-**Link to Game: 
+Link to Game: https://joditivis.github.io/unit-4-game/
 
 # About:
 University of Denver Coding Boot Camp fourth week assignment: This assigmnet required us to create a Crystal Collector Game using JavaScript and jQuery.
