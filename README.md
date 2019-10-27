@@ -20,7 +20,8 @@ University of Denver Coding Boot Camp fourth week assignment: This assigmnet req
 
 - The game will restart whenever you win or lose.
 
-- When the game begins again, you will see a new random number to match. Also, all the crystals will have four new hidden values.
+- When the game begins again, you will see a new random number to match. 
+Also, all the crystals will have four new hidden values.
 ```
 
 # Tools + Languages Used:
