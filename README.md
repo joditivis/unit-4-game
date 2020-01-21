@@ -2,10 +2,9 @@
 Link to Game: https://joditivis.github.io/unit-4-game/
 
 # About:
-University of Denver Coding Boot Camp fourth week assignment: This assigmnet required us to create a Crystal Collector Game using JavaScript and jQuery.
+University of Denver Coding Boot Camp fourth week assignment: Required us to create a Crystal Collector Game using JavaScript and jQuery.
 
-# How to Play:
-```
+# About + How to Play:
 - There are four crystals displayed as buttons on the page.
 
 - You will be shown a random number to match at the start of the game.
@@ -22,15 +21,14 @@ University of Denver Coding Boot Camp fourth week assignment: This assigmnet req
 
 - When the game begins again, you will see a new random number to match. 
 Also, all the crystals will have four new hidden values.
-```
 
 # Tools + Languages Used:
-* HTML
-* CSS
-* Bootstrap
-* Google Fonts
-* JavaScript
-* jQuery
+* HTML - markup language
+* CSS - styling
+* Bootstrap - web styling framework
+* Google Fonts - font generator
+* JavaScript - programming language
+* jQuery - javascript library
 
 
 # Features:
